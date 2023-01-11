@@ -21,9 +21,9 @@ public class Program {
        System.out.print("Digite  qual é seu departamento");
        String departmentName = sc.next();
        System.out.println("Dados do trabalhador");
-       System.out.print("Digite o nome do funcionario");
+       System.out.print("Digite o seu nome ");
        String workername= sc.next();
-       System.out.print("Digite o nivel do funcionario : JUNIOR, MID_LEVEL ou SENIOR ?");
+       System.out.print("Digite o  seu nivel JUNIOR, MID_LEVEL ou SENIOR ?");
        String workerLevel= sc.next();
        System.out.print("Digite seu Salario");
        double baseSalary= sc.nextDouble();
@@ -31,7 +31,7 @@ public class Program {
        //instanciando trabalhador 
        Worker worker = new Worker(workername, WorkerLevel.valueOf(workerLevel), baseSalary, new Department(departmentName));
        
-       System.out.println("Quantos contratos o funcionario terá ?");
+       System.out.println("Quantos contratos voce recebeu ?");
        int n= sc.nextInt();
        
        for(int i=1;i<=n;i++) {
@@ -47,13 +47,13 @@ public class Program {
     	  
     	  }
        System.out.println();
-        System.out.println("Entre com mes e ano para calcular o salario (MM/YYYY): ");
+        System.out.println("Entre com mes e ano para calcular o salario do respectivo mes (MM/YYYY): ");
         String monthandYear = sc.next();
         int month= Integer.parseInt(monthandYear.substring(0, 2));
         int year = Integer.parseInt(monthandYear.substring(3));
         System.out.println("Nome: " + worker.getName());
         System.out.println("Departamento: " + worker.getDepartment().getName());
-        System.out.println("Renda: " + monthandYear + ":" + String.format("%.2f",worker.income(year, month)));
+        System.out.println(" Neste mes a sua Renda foi: " + monthandYear + ":" + String.format("%.2f",worker.income(year, month)));
        
        
     //   System.out.println();
